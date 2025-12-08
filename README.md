@@ -13,6 +13,17 @@ This portfolio is intended primarily for:
 - `manual-qa/test-plan` — Test planning documents  
 - `manual-qa/requirements` — User stories and requirements examples  
 
+## Screenshots (Manual QA)
+
+A **manual-qa/screenshots** folder is included to store visual evidence such as:
+
+- Passed test case screenshots  
+- Bug reproduction steps  
+- UI validation captures  
+
+These support the written test cases and demonstrate real testing flow.
+
+
 ## 🖥️ Portfolio Website
 
 A simple front-end page is included to showcase my QA work and professional branding:
