@@ -58,8 +58,12 @@ manual-qa/
 ## How to View Test Cases
 
 1. Open the folder for the desired website (Amazon, Delta, Macy's).  
-2. Open the `*-tests.md` file to view feature-grouped test cases.  
-3. Screenshots are included in the `screenshots/` folder and referenced in the Markdown files.  
+2. Open the `test-cases/*.md` file to view feature-grouped test cases.  
+3. Screenshots are included in each client's `screenshots/` folder and referenced in the Markdown files.  
+4. Additional QA deliverables are included for each client:
+   - Requirements (`requirements/*.md`)
+   - Test Plans (`test-plans/*.md`)
+   - Bug Reports (`bug-reports/*.md`, empty placeholders for now)
 
 > Example: In Amazon tests, the invalid login screenshot is linked as:
 >
