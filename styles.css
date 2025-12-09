@@ -1,0 +1,149 @@
+/* =========================
+   styles.css — QA Portfolio
+   ========================= */
+
+/* --- Global Styles --- */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #f4f5f7; /* Clean, soft light gray */
+  color: #333333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Header --- */
+header {
+  background-color: #1e2a38; /* Dark Charcoal Blue */
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* --- Sections --- */
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #1e2a38;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* --- Skills & Tools Tiles --- */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skill {
+  background-color: #ffffff; /* white tile */
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  cursor: default;
+}
+
+.skill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  background-color: #e7f0ff; /* subtle hover highlight */
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* --- Portfolio / Client Sections --- */
+.client-section {
+  margin-bottom: 2rem;
+}
+
+.client-section h3 {
+  margin-bottom: 1rem;
+  color: #1e2a38;
+}
+
+.deliverables {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.deliverable {
+  background-color: #ffffff; /* Clean white tiles */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.deliverable:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-color: #e7f0ff; /* Subtle hover highlight */
+}
+
+.deliverable a {
+  font-weight: 600;
+  color: #3b82f6; /* Professional accent blue */
+}
+
+.coming-soon {
+  color: #9ca3af; /* Subtle gray for placeholders */
+  font-style: italic;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #1e2a38;
+  color: #ffffff;
+}
+
+footer a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+  .deliverables {
+    grid-template-columns: 1fr;
+  }
+  .skills, .about {
+    flex-direction: column;
+  }
+}
