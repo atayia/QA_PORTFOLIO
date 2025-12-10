@@ -61,9 +61,7 @@ QA_PORTFOLIO/
 
 ---
 
-### **README Part 2: Viewing instructions + Notes**
 
-```markdown
 ## How to View Test Cases
 
 1. Open the folder for the desired client (Amazon, Delta, Macy's).  
