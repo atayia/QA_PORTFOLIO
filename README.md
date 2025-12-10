@@ -28,6 +28,7 @@ Additionally, the repository includes:
 
 ## Repository Structure
 
+```text
 QA_PORTFOLIO/
 ├─ index.html
 ├─ styles.css
@@ -56,7 +57,7 @@ QA_PORTFOLIO/
 │     ├─ requirements/
 │     └─ test-plans/
 └─ README.md
-
+```
 
 ---
 
