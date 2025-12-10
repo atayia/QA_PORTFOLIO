@@ -29,7 +29,7 @@ Additionally, the repository includes:
 ## Repository Structure
 
 ```text
-QA_PORTFOLIO/
+qa-portfolio/
 ├─ index.html
 ├─ styles.css
 ├─ amazon.html
