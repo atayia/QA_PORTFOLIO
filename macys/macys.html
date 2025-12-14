@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body class="project">
+<a id="top"></a>
 
   <header>
     <div class="container">
@@ -112,6 +113,13 @@
   const options = { year: 'numeric', month: 'short', day: 'numeric' };
   lastUpdated.textContent = today.toLocaleDateString(undefined, options);
   </script>
+
+  <!-- Back to top link muted for short page -->
+<!--
+<a href="#top" class="back-to-top" aria-label="Back to top">
+    ↑
+</a>
+-->
 
 </body>
 </html>
