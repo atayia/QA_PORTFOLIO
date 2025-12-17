@@ -31,67 +31,125 @@ Additionally, the repository includes:
 
 
 ```text
-QA_PORTFOLIO/
-├─ index.html
-├─ styles.css
-├─ amazon.html
-├─ delta.html
-├─ macys.html
-├─ README.md
+qa-portfolio/
+├── index.html
+├── styles.css
+├── README.md
+├── resume/
+│   └── Marie-Jo_Atayi_Resume.pdf
 │
-├─ amazon/
-│  ├─ manual/
-│  │  ├─ amazon-test-cases.md
-│  │  ├─ amazon-test-plan.md
-│  │  ├─ amazon-requirements.md
-│  │  ├─ bug-reports/
-│  │  └─ screenshots/
-│  │
-│  └─ automation/
-│     ├─ README.md
-│     ├─ tests/
-│     │  ├─ test_login.py
-│     │  └─ test_search.py
-│     ├─ pages/
-│     │  ├─ login_page.py
-│     │  └─ search_page.py
-│     ├─ utils/
-│     │  └─ driver_factory.py
-│     ├─ config/
-│     │  └─ config.yaml
-│     └─ requirements.txt
+├── amazon/
+│   ├── amazon.html
+│   │
+│   ├── test-plans/
+│   │   ├── amazon-test-plan.html
+│   │   └── amazon-test-plan.md
+│   │
+│   ├── test-cases/
+│   │   ├── amazon-test-cases.html
+│   │   └── amazon-tests.md
+│   │
+│   ├── requirements/
+│   │   ├── amazon-requirements.html
+│   │   └── amazon-requirements.md
+│   │
+│   ├── bug-reports/
+│   │   └── amazon-bug-reports.html
+│   │
+│   ├── screenshots/
+│   │   ├── amazon-login-success.png
+│   │   ├── amazon-login-failed.png
+│   │   ├── amazon-screenshots.html
+│   │   └── thumbs/
+│   │       ├── amazon-login-success-thumb.png
+│   │       └── amazon-login-failed-thumb.png
+│   │
+│   └── automation/
+│       ├── amazon-automation.html
+│       ├── README.md
+│       ├── requirements.txt
+│       ├── configs/
+│       │   └── config.yaml
+│       ├── pages/
+│       │   ├── login_page.py
+│       │   └── search_page.py
+│       ├── tests/
+│       │   ├── test_login.py
+│       │   └── test_search.py
+│       └── utils/
+│           └── driver_factory.py
 │
-├─ delta/
-│  ├─ manual/
-│  │  ├─ delta-test-cases.md
-│  │  ├─ delta-test-plan.md
-│  │  ├─ delta-requirements.md
-│  │  ├─ bug-reports/
-│  │  └─ screenshots/
-│  │
-│  └─ automation/
-│     ├─ README.md
-│     ├─ tests/
-│     ├─ pages/
-│     ├─ utils/
-│     ├─ config/
-│     └─ requirements.txt
+├── delta/
+│   ├── delta.html
+│   │
+│   ├── test-plans/
+│   │   ├── delta-test-plan.html
+│   │   └── delta-test-plan.md
+│   │
+│   ├── test-cases/
+│   │   ├── delta-test-cases.html
+│   │   └── delta-tests.md
+│   │
+│   ├── requirements/
+│   │   ├── delta-requirements.html
+│   │   └── delta-requirements.md
+│   │
+│   ├── bug-reports/
+│   │   └── delta-bug-reports.html
+│   │
+│   ├── screenshots/
+│   │   └── delta-screenshots.html
+│   │
+│   └── automation/
+│       ├── delta-automation.html
+│       ├── README.md
+│       ├── requirements.txt
+│       ├── configs/
+│       │   └── config.yaml
+│       ├── pages/
+│       │   ├── login_page.py
+│       │   └── search_page.py
+│       ├── tests/
+│       │   ├── test_login.py
+│       │   └── test_search.py
+│       └── utils/
+│           └── driver_factory.py
 │
-└─ macys/
-   ├─ manual/
-   │  ├─ macys-test-cases.md
-   │  ├─ macys-test-plan.md
-   │  ├─ macys-requirements.md
-   │  ├─ bug-reports/
-   │  └─ screenshots/
-   │
-   └─ automation/
-      ├─ README.md
-      ├─ tests/
-      ├─ pages/
-      ├─ utils/
-      ├─ config/
-      └─ requirements.txt
+└── macys/
+    ├── macys.html
+    │
+    ├── test-plans/
+    │   ├── macys-test-plan.html
+    │   └── macys-test-plan.md
+    │
+    ├── test-cases/
+    │   ├── macys-test-cases.html
+    │   └── macys-tests.md
+    │
+    ├── requirements/
+    │   ├── macys-requirements.html
+    │   └── macys-requirements.md
+    │
+    ├── bug-reports/
+    │   └── macys-bug-reports.html
+    │
+    ├── screenshots/
+    │   └── macys-screenshots.html
+    │
+    └── automation/
+        ├── macys-automation.html
+        ├── README.md
+        ├── requirements.txt
+        ├── configs/
+        │   └── config.yaml
+        ├── pages/
+        │   ├── login_page.py
+        │   └── search_page.py
+        ├── tests/
+        │   ├── test_login.py
+        │   └── test_search.py
+        └── utils/
+            └── driver_factory.py
 ```
 
 ---
@@ -101,49 +159,57 @@ QA_PORTFOLIO/
 
 ## How to View Test Cases and Deliverables
 
-1. Open the HTML page for the desired client (`amazon.html`, `delta.html`, `macys.html`) to see a **summary of deliverables** and access links to internal pages or GitHub files.  
+1. Start from the main `index.html` page and select a client (Amazon, Delta, or Macy’s) to open that client’s **summary page**, which provides an overview of deliverables and links to dedicated internal HTML pages. 
 2. Each client page contains **tiles** for:
    - Test Plans  
    - Requirements  
    - Test Cases  
    - Bug Reports  
    - Automation (coming soon placeholders)  
-3. Clicking a tile opens the corresponding internal page or GitHub folder/file.  
-4. Screenshots are included in each client’s `screenshots/` folder and linked inside the internal pages for easy viewing.
+3. Clicking a tile opens the corresponding internal HTML deliverable page (Test Plans, Requirements, Test Cases, Bug Reports, or Automation).
+4. Screenshots are embedded directly within Test Cases as execution evidence. A dedicated Screenshots HTML page is linked from the Test Plan to provide a centralized visual reference using thumbnail previews.
 
-> Example: On Amazon page, a test case tile may open `amazon/manual/amazon-test-cases.md` or a GitHub file link.
 
 ---
 
-## Notes
+## Portfolio Navigation Notes
 
-- **All clients are unofficial**; used only for skill demonstration.  
-- Test case, plan, requirements, and bug report files are currently using a **consistent naming convention** across clients:  
-  - `<client>-test-cases.md`  
-  - `<client>-test-plan.md`  
-  - `<client>-requirements.md`  
-- Automation QA folder is included for each client and will be populated with scripts, pages, utils, and config as work progresses.  
-- All screenshots with sensitive data are **censored**.  
-- The portfolio is structured for **recruiters and potential clients** to review QA work professionally.  
-- The main `index.html` page links to each client’s summary page for clean navigation.  
-- Links use **relative paths** to avoid breaking when the repository is renamed.
+- **All clients are unofficial** and are used solely for skills demonstration and portfolio purposes.
+- Each client follows a **consistent deliverable structure**, with every major artifact presented through a **dedicated internal HTML page**:
+  - Test Cases  
+  - Test Plans  
+  - Requirements  
+  - Bug Reports  
+  - Screenshots (where applicable)  
+  - Automation (in progress / placeholder)
+- HTML pages serve as the **primary review interface** for this portfolio.  
+  Markdown files are retained as **source or reference artifacts** within the repository.
+- Screenshots are handled intentionally:
+  - Execution evidence is embedded directly within relevant **Test Case pages**, and  
+  - A dedicated **Screenshots HTML page** is linked from Test Plans or client summaries when a consolidated view is appropriate.
+- All screenshots containing sensitive or identifying information are **properly censored**.
+- Each client includes an **Automation QA folder** structured with configs, pages, tests, utilities, and documentation to demonstrate scalability and readiness for automation work.
+- The portfolio is structured for **clear, recruiter-friendly navigation**, without requiring reviewers to browse raw repository files.
+- The main `index.html` acts as the **central entry point**, linking to each client’s summary page.
+- All links use **relative paths** to prevent breakage if the repository is renamed or cloned.
 
 ---
 
 ## Future Work
 
-1. Execute all test cases and update screenshots.  
-2. Write corresponding bug reports.  
-3. Complete internal pages for each deliverable (manual and automation).  
-4. Add automation scripts and fully link the automation tiles to their internal pages.  
-5. Consider improving the portfolio with sleek dark-theme styling or icons where appropriate.  
-6. Keep the portfolio updated with last update information (footer).
+1. Continue executing manual test cases and expanding execution evidence.
+2. Add and refine corresponding bug reports per client.
+3. Finalize and polish all internal HTML deliverable pages.
+4. Expand automation scripts and fully link automation pages as development progresses.
+5. Apply optional UI enhancements (icons, dark theme, visual polish).
+6. Keep footer “last updated” information current to reflect ongoing improvements.
 
 ---
 
 ## Contact
 
-For questions or opportunities, reach me via email, LinkedIn, or GitHub (links included on `index.html` and client pages):
+For questions or professional opportunities, please connect via email, LinkedIn, or GitHub.  
+Links are available on `index.html` and on individual client pages.
 
 - Email: josianeatayi@gmail.com  
 - LinkedIn: [ayikouele-atayi](https://www.linkedin.com/in/ayikouele-atayi)  
