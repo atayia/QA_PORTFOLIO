@@ -1,192 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marie-Jo Atayi - Heat QA Solutions</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heat QA Solutions | Marie-Jo Atayi</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body>
-<a id="top"></a>
+<body id="top">
 
-<div class="container">
-
-  <!-- Header -->
-  <header class="hero">
-    <h1>Marie-Jo Atayi</h1>
-    <p><i>Heat QA Solutions</i> / QA Portfolio</p>
-  </header>
-
-  <!-- About / Intro -->
-  <section class="section intro">
-    <h2>About Me & This Portfolio</h2>
-    <p>I’m <b>Marie-Jo Atayi</b>, building my QA brand under <b>Heat QA Solutions</b>. This portfolio highlights my <b>Manual QA skills</b> through structured test cases, test plans, requirements, bug reports, and screenshots.    
-    <p>Designed for <b>recruiters and potential clients</b>, it provides clear access to client-specific deliverables and showcases my approach to validating functionality, UI quality, and thorough documentation. <i>Automation QA projects are coming soon.</i></p>
-  </section>
-
-  <!-- Portfolio Overview -->
-  <section id="portfolio-overview" class="section">
-  <h2>Portfolio Overview</h2>
-
-<p>
-  This portfolio is organized around unofficial client projects. Each client has a dedicated
-  summary page with clickable deliverables, along with internal pages presenting
-  detailed QA documentation in a clean, readable format.
-</p>
-
-<ul>
-  <li>
-    <strong>Client Summary Pages</strong> — High-level overviews for each unofficial client,
-    with tiles linking to all deliverables.
-  </li>
-  <li>
-    <strong>Test Plans</strong> — Internal HTML pages outlining objectives, scope, approach,
-    resources, and expected deliverables.
-  </li>
-  <li>
-    <strong>Requirements</strong> — Internal HTML pages documenting functional and UI
-    requirements serving as the basis for testing.
-  </li>
-  <li>
-    <strong>Test Cases</strong> — Structured, feature-grouped test cases on dedicated internal pages,
-    with screenshots linked where applicable.
-  </li>
-  <li>
-    <strong>Bug Reports</strong> — Internal pages with expandable sections for documenting defects,
-    designed to grow as additional issues are identified.
-  </li>
-  <li>
-    <strong>Screenshots</strong> — Pages showing thumbnail previews of test execution,
-    linking to full-size images.
-  </li>
-  <li>
-    <strong>Automation (Coming Soon)</strong> — Placeholder sections and folders reserved
-    for future automation QA work.
-  </li>
-</ul>
-
-  <p class="muted">
-    All clients are unofficial and used strictly for demonstration purposes.
-    Screenshots with sensitive information are censored where applicable.
-  </p>
-</section>
-
-
-
-  <!-- Unofficial Clients -->
-  <section style="margin-top:1.6rem;">
-    <h2>Unofficial Client Projects</h2>
-
-    <!-- Amazon summary -->
-    <div class="client-summary">
-      <div class="info">
-        <h3>Unofficial Client — Amazon</h3>
-          <p>Sample QA work covering e-commerce flows: search, product pages, cart, checkout, and order management. Includes test plans, test cases, and bug reports for functional and regression coverage.</p>
-      </div>
-      <div>
-        <a class="btn" href="amazon/amazon.html">View Project Page</a>
-      </div>
-    </div>
-
-      <!-- Delta summary -->
-    <div class="client-summary">
-      <div class="info">
-        <h3>Unofficial Client — Delta</h3>
-          <p>Sample QA work focusing on booking, check-in, boarding and ancillary flows. Emphasis on workflow validation, edge cases, and requirements coverage.</p>
-      </div>
-      <div>
-        <a class="btn" href="delta/delta.html">View Project Page</a>
-      </div>
-    </div>
-
-    <!-- Macy's summary -->
-    <div class="client-summary">
-      <div class="info">
-        <h3>Unofficial Client — Macy's</h3>
-          <p>Sample QA work for retail site scenarios: login, search, promotions, cart, and checkout. Includes traceable test cases and example bug reports.</p>
-      </div>
-      <div>
-        <a class="btn" href="macys/macys.html">View Project Page</a>
-      </div>
-    </div>
-
-  </section>
-
-
-  <!-- Core Skills -->
-  <section class="section skills">
-    <h2>Core Skills Demonstrated</h2>
-    <ul>
-      <li>Manual QA Testing & Documentation</li>
-      <li>Test Case Creation and Execution</li>
-      <li>Bug Reporting and Tracking</li>
-      <li>Requirements Analysis</li>
-      <li>Basic Automation QA Knowledge (placeholder)</li>
-      <li>HTML, CSS, Markdown for QA documentation</li>
-    </ul>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="left">
-        © 2025 Marie-Jo Atayi • Last updated: <span id="last-updated"></span>
-        <p class="footer-note"><i>Unofficial portfolio test artifact. For demonstration purposes only.</i></p>
+  <div class="wrapper">
+    <header class="intro-container">
+      
+      <div style="margin-bottom: 3rem;">
+        <h1 style="font-size: clamp(2.5rem, 8vw, 4.5rem); letter-spacing: -3px; margin: 0; line-height: 1.1;">
+          <span class="brand-gradient">Heat QA Solutions.</span>
+        </h1>
+        <div style="display: flex; align-items: center; gap: 15px; margin-top: 1rem;">
+          <div style="width: 30px; height: 2px; background: var(--accent);"></div>
+          <p style="color:var(--accent); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 4px;">
+            Quality Verification & Audit
+          </p>
+        </div>
       </div>
 
-      <div class="icons">
-
-        <!-- Resume Icon -->
-        <a class="icon" href="../resume/Marie-Jo_Atayi_Resume.pdf" target="_blank" aria-label="Resume">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" stroke="#e6eef6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M14 2v6h6" stroke="#e6eef6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M8 10h8M8 14h8M8 18h4" stroke="#e6eef6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-
-        <!-- Email -->
-        <a class="icon" href="mailto:josianeatayi@gmail.com" aria-label="Email">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M3 7.5v9A2.5 2.5 0 0 0 5.5 19h13a2.5 2.5 0 0 0 2.5-2.5v-9" stroke="#e6eef6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M21 7.5L12 13 3 7.5" stroke="#e6eef6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-
-        <!-- GitHub -->
-        <a class="icon" href="https://github.com/atayia" target="_blank" aria-label="GitHub">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M12 .5C5.65.5.75 5.36.75 11.7c0 4.8 3.1 8.9 7.41 10.35.54.1.73-.24.73-.52 0-.26-.01-1-.02-1.95-3.01.66-3.65-1.47-3.65-1.47-.49-1.24-1.2-1.57-1.2-1.57-.98-.67.07-.66.07-.66 1.08.08 1.65 1.12 1.65 1.12.96 1.64 2.52 1.17 3.14.9.1-.7.38-1.17.7-1.44-2.4-.27-4.92-1.2-4.92-5.34 0-1.18.42-2.14 1.11-2.9-.11-.27-.48-1.36.11-2.84 0 0 .9-.29 2.95 1.1a10.07 10.07 0 0 1 2.68-.37c.91 0 1.82.12 2.68.37 2.04-1.39 2.95-1.1 2.95-1.1.59 1.48.22 2.57.11 2.84.69.76 1.11 1.72 1.11 2.9 0 4.15-2.52 5.07-4.92 5.34.39.34.74 1.02.74 2.06 0 1.49-.01 2.69-.01 3.05 0 .29.19.63.74.52C20.15 20.6 23.25 16.5 23.25 11.7 23.25 5.36 18.35.5 12 .5z" fill="#e6eef6"/>
-          </svg>
-        </a>
-
-        <!-- LinkedIn -->
-        <a class="icon" href="https://www.linkedin.com/in/ayikouele-atayi" target="_blank" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M4.98 3.5a2.25 2.25 0 1 1 0 4.5 2.25 2.25 0 0 1 0-4.5zM3.5 9.5h3v11h-3v-11zM9.5 9.5h2.88v1.5h.04c.4-.76 1.38-1.58 2.84-1.58 3.04 0 3.6 2 3.6 4.58v6.5h-3v-5.75c0-1.37-.02-3.12-1.9-3.12-1.9 0-2.19 1.48-2.19 3.01v5.86h-3v-11z" fill="#e6eef6"/>
-          </svg>
-        </a>
-
+      <div class="narrative-text">
+        <p>
+          I’m <span style="color:var(--accent); font-weight: 600;">Marie-Jo Atayi</span>, building my QA brand under 
+          <span style="color:#fff; font-weight: 500;">Heat QA Solutions</span>. This portfolio highlights my 
+          <strong>Manual QA skills</strong> through structured test cases, test plans, requirements, 
+          bug reports, and detailed evidence.
+        </p>
+        
+        <p style="color: #cbd5e1; font-size: 1.1rem;">
+          Designed for <strong>recruiters and potential clients</strong>, it provides clear access to 
+          client-specific deliverables and showcases my approach to validating functionality, 
+          UI quality, and thorough documentation. 
+          <span style="color:var(--accent); font-style: italic;">Automation QA projects are coming soon.</span>
+        </p>
       </div>
 
+      <div class="disclaimer-bar" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 1.2rem; border-radius: 8px; margin-top: 3rem; font-size: 0.85rem; color: #94a3b8; display: flex; gap: 15px; line-height: 1.5;">
+        <i class="fas fa-balance-scale" style="color: var(--accent); font-size: 1.1rem;"></i>
+        <span>
+          <strong>Project Disclosure:</strong> To maintain professional transparency, the work displayed consists of 
+          <strong>independent, unofficial audits</strong>. These studies demonstrate my methodology and documentation 
+          standards and do not represent a formal affiliation with the featured companies.
+        </span>
+      </div>
+    </header>
 
-    </div>
+    <main style="max-width: 900px; margin: 4rem auto 0 auto;">
+      <h2 style="font-size: 1.3rem; color: #fff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+        Independent Case Studies
+      </h2>
 
-  </footer>
-
-  <script>
-  // Automatically set the last updated date
-  const lastUpdated = document.getElementById('last-updated');
-  const today = new Date();
-  const options = { year: 'numeric', month: 'short', day: 'numeric' };
-  lastUpdated.textContent = today.toLocaleDateString(undefined, options);
-  </script>
-
+      <a href="projects/amazon/amazon.html" class="req-item" style="text-decoration: none; color: inherit; display: block;">
+         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+           <h3 style="font-size: 1.8rem; margin: 0; color: #fff;">Amazon E-Commerce Verification</h3>
+           <span class="status-badge" style="border: 1px solid var(--accent); background: rgba(59, 130, 246, 0.1); color: var(--accent); font-size: 0.65rem; font-weight: 700;">UNOFFICIAL AUDIT</span>
+         </div>
+         <p style="color:#94a3b8; line-height: 1.6; margin-bottom: 1.5rem;">
+           A comprehensive manual quality audit focusing on high-risk functional modules. 
+           Includes Requirement Traceability (RTM), Master Test Planning, and 10-row technical test cases.
+         </p>
+         <div style="display: flex; gap: 2rem; font-size: 0.8rem; color: var(--accent); font-weight: 700;">
+           <span><i class="fas fa-file-invoice"></i> RTM</span>
+           <span><i class="fas fa-tasks"></i> 6 CASES</span>
+           <span><i class="fas fa-bug"></i> DEFECTS</span>
+         </div>
+      </a>
+    </main>
   </div>
 
-  <a href="#top" class="back-to-top" aria-label="Back to top">
-    ↑
-  </a>
+  <footer id="footer-bottom" style="margin-top: 8rem; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 0;">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+        <div style="color:#94a3b8; font-size: 0.8rem;">
+            <p>&copy; 2026 Marie-Jo Atayi | Heat QA Solutions</p>
+            <p style="margin-top: 5px; color: var(--accent);">Verified on macOS Sequoia 15</p>
+        </div>
+        <div class="footer-icons" style="display: flex; gap: 20px; font-size: 1.2rem;">
+          <a href="mailto:heatqa.test@gmail.com" style="color: #fff;"><i class="fas fa-envelope"></i></a>
+          <a href="resume/Marie-Jo_Atayi_Resume.pdf" target="_blank" style="color: #fff;"><i class="fas fa-file-pdf"></i></a>
+          <a href="https://linkedin.com/in/atayia" target="_blank" style="color: #fff;"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/atayia" target="_blank" style="color: #fff;"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+  </footer>
 
+  <a href="#footer-bottom" id="jumpToBottom" style="position: fixed; bottom: 80px; right: 30px; width: 45px; height: 45px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000;"><i class="fas fa-arrow-down"></i></a>
+  <a href="#top" id="backToTop" style="position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; opacity: 0; pointer-events: none;"><i class="fas fa-arrow-up"></i></a>
+
+  <script>
+    const backToTop = document.getElementById('backToTop');
+    const jumpToBottom = document.getElementById('jumpToBottom');
+    window.onscroll = function() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) { backToTop.style.opacity = "1"; backToTop.style.pointerEvents = "auto"; } 
+      else { backToTop.style.opacity = "0"; backToTop.style.pointerEvents = "none"; }
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 150) { jumpToBottom.style.opacity = "0"; jumpToBottom.style.pointerEvents = "none"; } 
+      else { jumpToBottom.style.opacity = "1"; jumpToBottom.style.pointerEvents = "auto"; }
+    };
+  </script>
 </body>
 </html>

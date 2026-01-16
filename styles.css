@@ -220,6 +220,93 @@ body {
 }
 .req-item:hover { transform: translateX(10px); background: rgba(30, 41, 59, 0.9); }
 
+/* Fluid Layout Utilities */
+.intro-container {
+    padding: 4rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle separation */
+}
+
+.intro-brand-line {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.intro-text-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Asymmetric grid feels more modern */
+    gap: 4rem;
+    align-items: start;
+}
+
+@media (max-width: 850px) {
+    .intro-text-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.lead-text {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.support-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+.intro-container {
+    padding: 6rem 0 4rem 0;
+}
+
+.narrative-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+    max-width: 1000px;
+}
+
+.intro-container {
+    padding: 8rem 0 4rem 0;
+    max-width: 900px; /* Prevents the 75% stretch */
+    margin: 0 auto;    /* Centers the container */
+}
+
+/* Brighter Brand Identity */
+.brand-gradient {
+    background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.narrative-text p {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #f1f5f9; /* Much brighter than var(--muted) */
+    margin-bottom: 1.5rem;
+}
+
+.disclaimer-bar {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.disclaimer-bar i { color: var(--accent); }
 
 /* Icon-Based Footer */
 footer {
