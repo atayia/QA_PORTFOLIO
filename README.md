@@ -1,216 +1,77 @@
 # Heat QA Solutions — QA Portfolio
 
-Welcome to my Quality Assurance portfolio. I am building the Heat QA Solutions brand as a professional identity for my QA work, learning projects, and future career growth. This repository showcases my **Manual QA work**, with **Automation QA projects coming soon**.
+Welcome to my Quality Assurance portfolio. I am building the Heat QA Solutions brand as a professional identity for my QA work, documenting a full testing lifecycle from strategy to execution.
 
-This portfolio is intended primarily for:  
-- **Recruiters** – to review my QA skills, documentation style, and testing approach.  
-- **Future professional opportunities** – including long-term roles and potential freelance work.
-
----
-
-## Portfolio Overview
-
-Each client folder contains:
-
-- **Test Cases** — feature-grouped test cases in Markdown format  
-- **Screenshots** — evidence of executed tests (sensitive information censored)  
-- **Bug Reports** — sample or demo bug reports  
-- **Requirements** — sample requirement documents  
-- **Test Plans** — test plan documents  
-- **Automation** — placeholder folders and scripts for future automation QA
-
-Additionally, the repository includes:
-
-- **index.html** — the website homepage to showcase the portfolio online  
-- **styles.css** — the stylesheet used for portfolio pages  
-- **Client-specific HTML pages** — for each unofficial client to view deliverables via browser  
+This portfolio is tailored for:  
+- **Recruiters** – to review my technical documentation, traceability, and risk-based testing approach.
+- **Stakeholders** – to see a "deep dive" into high-complexity web ecosystems.
 
 ---
 
-## Portfolio Structure
+## 🔍 Featured Project: Amazon E-Commerce Audit
 
+> **Disclaimer:** This project is an independent QA audit conducted for portfolio and educational purposes. Amazon is an **unofficial client**, and this work is not affiliated with, endorsed by, or representative of Amazon.com, Inc.
+
+I am currently conducting a comprehensive end-to-end audit of the Amazon web platform. Rather than shallow testing across multiple sites, this project focuses on high-risk, high-impact workflows within the world's largest e-commerce environment.
+
+### Deep Dive Focus Areas:
+* **Identity Management:** Auth flows, account security, and session persistence.
+* **Search & Discovery:** Filtering logic, search relevancy, and category navigation.
+* **The Golden Path:** Add-to-cart logic, inventory validation, and the multi-step checkout funnel.
+* **Data Integrity:** Validating that front-end UI accurately reflects back-end database states (price changes, stock levels).
+
+---
+
+## 📂 Portfolio Structure
 
 ```text
 qa-portfolio/
-├── index.html
-├── styles.css
-├── README.md
-├── resume/
-│   └── Marie-Jo_Atayi_Resume.pdf
+├── index.html              # Central entry point
+├── styles.css              # Consolidated responsive styles (Mobile-optimized)
+├── README.md               # Project documentation
+├── resume/                 # Professional Resume (PDF)
 │
-├── amazon/
-│   ├── amazon.html
-│   │
-│   ├── test-plans/
-│   │   ├── amazon-test-plan.html
-│   │   └── amazon-test-plan.md
-│   │
-│   ├── test-cases/
-│   │   ├── amazon-test-cases.html
-│   │   └── amazon-tests.md
-│   │
-│   ├── requirements/
-│   │   ├── amazon-requirements.html
-│   │   └── amazon-requirements.md
-│   │
-│   ├── bug-reports/
-│   │   └── amazon-bug-reports.html
-│   │
-│   ├── screenshots/
-│   │   ├── amazon-login-success.png
-│   │   ├── amazon-login-failed.png
-│   │   ├── amazon-screenshots.html
-│   │   └── thumbs/
-│   │       ├── amazon-login-success-thumb.png
-│   │       └── amazon-login-failed-thumb.png
-│   │
-│   └── automation/
-│       ├── amazon-automation.html
-│       ├── README.md
-│       ├── requirements.txt
-│       ├── configs/
-│       │   └── config.yaml
-│       ├── pages/
-│       │   ├── login_page.py
-│       │   └── search_page.py
-│       ├── tests/
-│       │   ├── test_login.py
-│       │   └── test_search.py
-│       └── utils/
-│           └── driver_factory.py
-│
-├── delta/
-│   ├── delta.html
-│   │
-│   ├── test-plans/
-│   │   ├── delta-test-plan.html
-│   │   └── delta-test-plan.md
-│   │
-│   ├── test-cases/
-│   │   ├── delta-test-cases.html
-│   │   └── delta-tests.md
-│   │
-│   ├── requirements/
-│   │   ├── delta-requirements.html
-│   │   └── delta-requirements.md
-│   │
-│   ├── bug-reports/
-│   │   └── delta-bug-reports.html
-│   │
-│   ├── screenshots/
-│   │   └── delta-screenshots.html
-│   │
-│   └── automation/
-│       ├── delta-automation.html
-│       ├── README.md
-│       ├── requirements.txt
-│       ├── configs/
-│       │   └── config.yaml
-│       ├── pages/
-│       │   ├── login_page.py
-│       │   └── search_page.py
-│       ├── tests/
-│       │   ├── test_login.py
-│       │   └── test_search.py
-│       └── utils/
-│           └── driver_factory.py
-│
-└── macys/
-    ├── macys.html
-    │
-    ├── test-plans/
-    │   ├── macys-test-plan.html
-    │   └── macys-test-plan.md
-    │
-    ├── test-cases/
-    │   ├── macys-test-cases.html
-    │   └── macys-tests.md
-    │
-    ├── requirements/
-    │   ├── macys-requirements.html
-    │   └── macys-requirements.md
-    │
-    ├── bug-reports/
-    │   └── macys-bug-reports.html
-    │
-    ├── screenshots/
-    │   └── macys-screenshots.html
-    │
-    └── automation/
-        ├── macys-automation.html
-        ├── README.md
-        ├── requirements.txt
-        ├── configs/
-        │   └── config.yaml
-        ├── pages/
-        │   ├── login_page.py
-        │   └── search_page.py
-        ├── tests/
-        │   ├── test_login.py
-        │   └── test_search.py
-        └── utils/
-            └── driver_factory.py
+└── amazon/                 # ACTIVE: Deep Dive E-Commerce Audit
+    ├── amazon.html         # Amazon Project Hub
+    ├── test-plans/         # Risk analysis & Strategy
+    ├── test-cases/         # Traceability matrix & execution
+    ├── requirements/       # Feature specifications
+    ├── bug-reports/        # Defect logging & severity ranking
+    ├── screenshots/        # Visual execution evidence
+    └── automation/         # Pytest Framework (POM)
 ```
 
 ---
 
+## 🛠️ Testing Deliverables
+
+Each deliverable is presented through a **dedicated HTML interface** for recruiter-friendly navigation, emphasizing full lifecycle traceability:
+
+1. **Test Strategy & Plans** High-level overview of scope, resource allocation, and risk-based prioritization specifically tailored for the Amazon e-commerce ecosystem.
+
+2. **Requirements Analysis & Traceability Matrix** Detailed breakdown of Amazon business logic into testable requirements. Includes a **Traceability Matrix** mapping each requirement to its corresponding Test Case and any associated Defect IDs, ensuring 100% test coverage.
+
+3. **Test Case Suites** Comprehensive test suites grouped by high-impact features (Authentication, Cart, Search). Each suite is linked directly to the original requirements and includes embedded screenshots as visual execution evidence.
+
+4. **Bug Reports & Defect Tracking** Professional defect logs cross-referenced with failed Test Cases. Reports include clear reproduction steps, environment details (iPhone 12 Pro), and severity-based impact rankings.
+
+5. **Automation (In Progress)** A Python-based framework utilizing the Page Object Model (POM) and Pytest to demonstrate how manual "Golden Path" test cases are transitioned into scalable, maintainable automated scripts.
 
 ---
 
-## How to View Test Cases and Deliverables
+## 📱 Tech Stack & Quality Standards
 
-1. Start from the main `index.html` page and select a client (Amazon, Delta, or Macy’s) to open that client’s **summary page**, which provides an overview of deliverables and links to dedicated internal HTML pages. 
-2. Each client page contains **tiles** for:
-   - Test Plans  
-   - Requirements  
-   - Test Cases  
-   - Bug Reports  
-   - Automation (coming soon placeholders)  
-3. Clicking a tile opens the corresponding internal HTML deliverable page (Test Plans, Requirements, Test Cases, Bug Reports, or Automation).
-4. Screenshots are embedded directly within Test Cases as execution evidence. A dedicated Screenshots HTML page is linked from the Test Plan to provide a centralized visual reference using thumbnail previews.
-
+* **Documentation:** Markdown, HTML5, CSS3 (Modern, responsive design optimized for iPhone 12 Pro).
+* **Methodology:** Manual Exploratory Testing, Regression Testing, and **End-to-End Traceability**.
+* **Device Coverage:** Audited across multiple viewports to ensure UI/UX consistency on mobile Safari and Chrome.
+* **Best Practices:** Strict adherence to the 50/72 Git commit rule and structured documentation standards.
 
 ---
 
-## Portfolio Navigation Notes
+## 📬 Contact & Connect
 
-- **All clients are unofficial** and are used solely for skills demonstration and portfolio purposes.
-- Each client follows a **consistent deliverable structure**, with every major artifact presented through a **dedicated internal HTML page**:
-  - Test Cases  
-  - Test Plans  
-  - Requirements  
-  - Bug Reports  
-  - Screenshots (where applicable)  
-  - Automation (in progress / placeholder)
-- HTML pages serve as the **primary review interface** for this portfolio.  
-  Markdown files are retained as **source or reference artifacts** within the repository.
-- Screenshots are handled intentionally:
-  - Execution evidence is embedded directly within relevant **Test Case pages**, and  
-  - A dedicated **Screenshots HTML page** is linked from Test Plans or client summaries when a consolidated view is appropriate.
-- All screenshots containing sensitive or identifying information are **properly censored**.
-- Each client includes an **Automation QA folder** structured with configs, pages, tests, utilities, and documentation to demonstrate scalability and readiness for automation work.
-- The portfolio is structured for **clear, recruiter-friendly navigation**, without requiring reviewers to browse raw repository files.
-- The main `index.html` acts as the **central entry point**, linking to each client’s summary page.
-- All links use **relative paths** to prevent breakage if the repository is renamed or cloned.
+- **Email:** josianeatayi@gmail.com
+- **LinkedIn:** [ayikouele-atayi](https://www.linkedin.com/in/ayikouele-atayi)
+- **GitHub:** [atayia](https://github.com/atayia)
 
----
-
-## Future Work
-
-1. Continue executing manual test cases and expanding execution evidence.
-2. Add and refine corresponding bug reports per client.
-3. Finalize and polish all internal HTML deliverable pages.
-4. Expand automation scripts and fully link automation pages as development progresses.
-5. Apply optional UI enhancements (icons, dark theme, visual polish).
-6. Keep footer “last updated” information current to reflect ongoing improvements.
-
----
-
-## Contact
-
-For questions or professional opportunities, please connect via email, LinkedIn, or GitHub.  
-Links are available on `index.html` and on individual client pages.
-
-- Email: josianeatayi@gmail.com  
-- LinkedIn: [ayikouele-atayi](https://www.linkedin.com/in/ayikouele-atayi)  
-- GitHub: [atayia](https://github.com/atayia)
+&copy; 2026 Marie-Jo Atayi | Heat QA Solutions
