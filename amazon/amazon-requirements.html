@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requirements | Amazon Project</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body id="top">
+
+  <div class="wrapper">
+    <header class="intro-container bug-header">
+      <a href="../amazon.html" class="back-link">← AMAZON HUB</a>
+      <h1 class="deliverable-title"><span class="deliverable-gradient">Business Requirements</span></h1>
+      <p class="deliverable-subtitle">Traceability Matrix: Verifying the core Amazon shopping experience.</p>
+
+      <nav class="project-menu">
+        <a href="../requirements/amazon-requirements.html" class="menu-link active">Requirements</a>
+        <a href="../test-plans/amazon-test-plan.html" class="menu-link">Test Plan</a>
+        <a href="../test-cases/amazon-test-cases.html" class="menu-link">Test Cases</a>
+        <a href="../bug-reports/amazon-bug-reports.html" class="menu-link">Bug Reports</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="report-section" id="REQ-AMZ-01">
+        <div class="project-card-header">
+            <h2 class="report-title">REQ-AMZ-01: User Authentication & Accessibility</h2>
+            <span class="badge positive">WCAG 2.1 AA Compliance</span>
+        </div>
+        <div class="tc-table">
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">1. Description</span></div>
+                <div class="cell cell-right">
+                    The system shall allow users with valid email/password combinations to establish a secure authenticated session. Upon success, a personalized greeting "Hello, [User]" must be displayed.
+                </div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">2. A11y Compliance</span></div>
+                <div class="cell cell-right">
+                    Interface must meet WCAG 2.1 AA standards:
+                    <ul class="standard-list">
+                        <li>Keyboard-only navigation (Tab/Enter) must be fully functional.</li>
+                        <li>Screen readers must announce input labels correctly.</li>
+                        <li>Minimum color contrast ratio of 4.5:1 for all text.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">3. Verified By</span></div>
+                <div class="cell cell-right">
+                    <a href="../test-cases/amazon-test-cases.html#TC-AMZ-001" class="back-link">TC-AMZ-001</a>, 
+                    <a href="../test-cases/amazon-test-cases.html#TC-AMZ-007" class="back-link">TC-AMZ-007</a>, 
+                    <a href="../test-cases/amazon-test-cases.html#TC-AMZ-008" class="back-link">TC-AMZ-008</a>
+                </div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">4. Status</span></div>
+                <div class="cell cell-right"><span class="status-badge partial">Partially Verified</span></div>
+            </div>
+            <div class="tc-row-item">
+              <div class="cell cell-left"><span class="label-text">Linked Bug</span></div>
+              <div class="cell cell-right">N/A</div>
+            </div>
+        </div>
+        <div class="tc-separator"></div>
+      </article>
+
+      <article class="report-section" id="REQ-AMZ-02">
+        <div class="project-card-header">
+            <h2 class="report-title">REQ-AMZ-02: Security Handling</h2>
+        </div>
+        <div class="tc-table">
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Description</span></div>
+                <div class="cell cell-right">The system shall reject invalid credentials and provide non-revealing error messages.</div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Verified By</span></div>
+                <div class="cell cell-right"><a href="../test-cases/amazon-test-cases.html#TC-AMZ-002" class="back-link">TC-AMZ-002</a></div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Status</span></div>
+                <div class="cell cell-right"><span class="status-badge pass">Verified</span></div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Linked Bug</span></div>
+                <div class="cell cell-right">N/A</div>
+            </div>
+        </div>
+        <div class="tc-separator"></div>
+      </article>
+
+      <article class="report-section" id="REQ-AMZ-03">
+        <div class="project-card-header">
+            <h2 class="report-title">REQ-AMZ-03: Global Product Search</h2>
+        </div>
+        <div class="tc-table">
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Description</span></div>
+                <div class="cell cell-right">The system shall return relevant product results for alphanumeric search queries.</div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Verified By</span></div>
+                <div class="cell cell-right">
+                  <a href="../test-cases/amazon-test-cases.html#TC-AMZ-003" class="back-link">TC-AMZ-003,</a>
+                  <a href="../test-cases/amazon-test-cases.html#TC-AMZ-005" class="back-link"> TC-AMZ-005</a>
+                </div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Status</span></div>
+                <div class="cell cell-right"><span class="status-badge in-progress">In Progress</span></div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Linked Bug</span></div>
+                <div class="cell cell-right"><a >N/A</a></div>
+            </div>
+        </div>
+        <div class="tc-separator"></div>
+      </article>
+
+      <article class="report-section" id="REQ-AMZ-04">
+        <h2 class="report-title">REQ-AMZ-04: Shopping Cart State</h2>
+        <div class="tc-table">
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Description</span></div>
+                <div class="cell cell-right">The system shall maintain cart persistence across sessions and enforce stock-based quantity limits.</div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Verified By</span></div>
+                <div class="cell cell-right">
+                  <a href="../test-cases/amazon-test-cases.html#TC-AMZ-004" class="back-link">TC-AMZ-004,</a>
+                  <a href="../test-cases/amazon-test-cases.html#TC-AMZ-006" class="back-link"> TC-AMZ-006</a>
+                </div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Status</span></div>
+                <div class="cell cell-right"><span class="status-badge in-progress">In Progress</span></div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Linked Bug</span></div>
+                <div class="cell cell-right">N/A</div>
+            </div>
+        </div>
+        <div class="tc-separator"></div>
+      </article>
+
+      <article class="report-section" id="REQ-AMZ-05">
+        <h2 class="report-title">REQ-AMZ-05: Product Detail Accuracy</h2>
+        <div class="tc-table">
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Description</span></div>
+                <div class="cell cell-right">The system shall display accurate pricing, reviews, and high-resolution images for all listed products.</div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Verified By</span></div>
+                <div class="cell cell-right">TBD</div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Status</span></div>
+                <div class="cell cell-right"><span class="status-pending-text">Draft</span></div>
+            </div>
+            <div class="tc-row-item">
+                <div class="cell cell-left"><span class="label-text">Linked Bug</span></div>
+                <div class="cell cell-right">N/A</div>
+            </div>
+        </div>
+        <div class="tc-separator"></div>
+      </article>
+    </main>
+  </div>
+
+<footer id="footer-bottom"></footer>
+
+<script src="../../scripts.js"></script>
+
+</body>
+</html>
