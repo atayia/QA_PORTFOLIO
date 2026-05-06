@@ -1,100 +1,118 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Get the current URL path segments
+  // ==========================================================================
+  // 1. FOOTER INJECTION
+  // Injects the 3-column footer on all inner pages.
+  // Skipped on index.html which has its own hardcoded footer-content layout.
+  // ==========================================================================
+  const footerElement = document.getElementById('footer-bottom');
+  const isIndexPage = window.location.pathname.endsWith('index.html') ||
+                      window.location.pathname.endsWith('/') ||
+                      window.location.pathname.endsWith('/qa-portfolio/');
+
+  if (footerElement && !isIndexPage) {
+
+    // Calculate relative path prefix based on page depth
     const path = window.location.pathname;
     const segments = path.split('/').filter(s => s.length > 0);
-
-    // Calculate how deep we are
-    // GitHub Pages: /repo-name/folder/subfolder/index.html -> ["repo", "folder", "subfolder", "index.html"]
-    // Ignore the 'repo' name and the 'filename'.
     const isGitHub = window.location.hostname.includes('github.io');
 
-    // Depth -> total segments minus the repo name
+    // GitHub Pages: /repo-name/folder/file.html → depth = segments - 2 (repo + file)
+    // Local:        /folder/file.html            → depth = segments - 1 (file)
     let depth = isGitHub ? segments.length - 2 : segments.length - 1;
+    depth = Math.max(0, depth); // Guard against negative values
 
-    // Build the prefix dynamically (e.g., "", "../", or "../../")
-    let prefix = "";
-    if (depth > 0) {
-        for (let i = 0; i < depth; i++) {
-            prefix += "../";
-        }
+    let prefix = '';
+    for (let i = 0; i < depth; i++) {
+      prefix += '../';
     }
 
-    console.log("Path Segments:", segments);
-    console.log("Calculated Prefix:", prefix);
+    footerElement.innerHTML = `
+      <div class="footer-container">
+        <div class="footer-col col-left">
+          <p class="footer-disclaimer">Independent Audit &bull; Unofficial Client</p>
+        </div>
+        <div class="footer-col col-center">
+          <p>&copy; ${new Date().getFullYear()} Marie-Jo Atayi | Heat QA Solutions</p>
+        </div>
+        <div class="footer-col col-right">
+          <div class="footer-icons">
+            <a href="mailto:josianeatayi@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="${prefix}resume/Marie-Jo_Atayi_Resume.pdf" target="_blank" rel="noopener" aria-label="Resume">
+              <i class="fas fa-file-pdf"></i>
+            </a>
+            <a href="https://linkedin.com/in/ayikouele-atayi/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/atayia" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
 
-    const footerElement = document.getElementById('footer-bottom');
-    if (footerElement) {
-        footerElement.innerHTML = `
-            <div class="footer-container">
-                <div class="footer-col col-left">
-                    <p class="footer-disclaimer">Independent Audit • Unofficial Client</p>
-                </div>
-                <div class="footer-col col-center">
-                    <p>&copy; ${new Date().getFullYear()} Marie-Jo Atayi | Heat QA Solutions</p>
-                </div>
-                <div class="footer-col col-right">
-                    <div class="footer-icons">
-                        <a href="mailto:josianeatayi@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href="${prefix}resume/Marie-Jo_Atayi_Resume.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
-                        <a href="https://linkedin.com/in/ayikouele-atayi/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/atayia" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        `;
+
+  // ==========================================================================
+  // 2. LIGHTBOX MODAL
+  // Exposed on window so onclick="openModal()" attributes work from HTML.
+  // ==========================================================================
+  window.openModal = function (imgSrc) {
+    const modal = document.getElementById('evidenceModal');
+    const modalImg = document.getElementById('modalImg');
+    if (!modal || !modalImg) return;
+
+    modal.style.display = 'flex';
+    modalImg.src = imgSrc;
+  };
+
+  window.closeModal = function () {
+    const modal = document.getElementById('evidenceModal');
+    if (!modal) return;
+    modal.style.display = 'none';
+  };
+
+  // Close on backdrop click
+  document.addEventListener('click', function (e) {
+    const modal = document.getElementById('evidenceModal');
+    if (modal && e.target === modal) {
+      modal.style.display = 'none';
     }
+  });
 
-    // Evidence Modal Logic
-    function openModal(imgSrc) {
-        const modal = document.getElementById("evidenceModal");
-        const modalImg = document.getElementById("modalImg");
+  // Close on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') window.closeModal();
+  });
 
-        modal.style.display = "block";
-        modalImg.src = imgSrc;
 
-        // Close when clicking the 'X'
-        document.querySelector(".close-modal").onclick = function () {
-            modal.style.display = "none";
-        }
+  // ==========================================================================
+  // 3. SCROLL BUTTONS (Back to Top / Jump to Bottom)
+  // Uses addEventListener to avoid overwriting other scroll handlers.
+  // ==========================================================================
+  const backToTop = document.getElementById('backToTop');
+  const jumpToBottom = document.getElementById('jumpToBottom');
 
-        // Close when clicking anywhere outside the image
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    }
+  if (backToTop || jumpToBottom) {
+    window.addEventListener('scroll', function () {
+      const scrolled = document.body.scrollTop > 500 ||
+                       document.documentElement.scrollTop > 500;
+      const nearBottom = (window.innerHeight + window.scrollY) >=
+                         document.body.offsetHeight - 200;
 
-    // SCROLL BUTTON LOGIC (Back to Top / Jump to Bottom)
-    const backToTop = document.getElementById('backToTop');
-    const jumpToBottom = document.getElementById('jumpToBottom');
+      if (backToTop) {
+        backToTop.style.opacity = scrolled ? '1' : '0';
+        backToTop.style.pointerEvents = scrolled ? 'auto' : 'none';
+      }
 
-    window.onscroll = function () {
-        // Show/Hide Back to Top
-        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-            if (backToTop) {
-                backToTop.style.opacity = "1";
-                backToTop.style.pointerEvents = "auto";
-            }
-        } else {
-            if (backToTop) {
-                backToTop.style.opacity = "0";
-                backToTop.style.pointerEvents = "none";
-            }
-        }
+      if (jumpToBottom) {
+        jumpToBottom.style.opacity = nearBottom ? '0' : '1';
+        jumpToBottom.style.pointerEvents = nearBottom ? 'none' : 'auto';
+      }
+    });
+  }
 
-        // Hide Jump to Bottom when near the footer
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200) {
-            if (jumpToBottom) {
-                jumpToBottom.style.opacity = "0";
-                jumpToBottom.style.pointerEvents = "none";
-            }
-        } else {
-            if (jumpToBottom) {
-                jumpToBottom.style.opacity = "1";
-                jumpToBottom.style.pointerEvents = "auto";
-            }
-        }
-    };
 });
