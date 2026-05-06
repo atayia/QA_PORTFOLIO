@@ -325,7 +325,7 @@
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">8. Test Data</span></div>
-            <div class="cell cell-right">Item ID: <code>ASIN: B0FB21526X — Logitech MX Master 3S Bluetooth Mouse</code></div>
+            <div class="cell cell-right">ASIN: <code>B0FB21526X</code> — Logitech MX Master 3S Bluetooth Mouse</div>
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">9. Execution Steps</span></div>
@@ -378,7 +378,7 @@
       <article class="report-section" id="TC-AMZ-005">
         <div class="project-card-header">
           <h2 class="report-title">TC-AMZ-005: Global Search — No Results (Negative)</h2>
-          <span class="status-badge status-pending">Pending</span>
+          <span class="status-badge partial">Pass</span>
         </div>
         <div class="tc-table">
           <div class="tc-row-item">
@@ -430,11 +430,25 @@
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">11. Actual Result</span></div>
-            <div class="cell cell-right">N/A (Pending Execution)</div>
+            <div class="cell cell-right">No organic results returned for query zxyvwk123456789. System displayed sponsored fallback products with no "no results"
+            message. Amazon does not surface a true empty state</div>
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">12. Status</span></div>
-            <div class="cell cell-right"><span class="status-badge status-pending">Pending</span></div>
+            <div class="cell cell-right"><span class="status-badge partial">Pass</span></div>
+          </div>
+          <div class="tc-row-item">
+            <div class="cell cell-left"><span class="label-text">13. Evidence</span></div>
+            <div class="cell cell-right">
+              <div class="evidence-area">
+                <div class="evidence-box">
+                  <h4>UI Validation</h4>
+                  <img src="screenshots/amazon-search-noresults.png" alt="System displays sponsored fallback products with no 'no results' "
+                    class="tc-screenshot zoomable" onclick="openModal(this.src)">
+                  <p class="evidence-caption"><i class="fas fa-search-plus"></i> Click to enlarge</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="tc-separator"></div>
@@ -444,7 +458,7 @@
       <article class="report-section" id="TC-AMZ-006">
         <div class="project-card-header">
           <h2 class="report-title">TC-AMZ-006: Shopping Cart — Max Quantity (Boundary)</h2>
-          <span class="status-badge status-pending">Pending</span>
+          <span class="status-badge partial">Pass</span>
         </div>
         <div class="tc-table">
           <div class="tc-row-item">
@@ -479,7 +493,7 @@
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">8. Test Data</span></div>
-            <div class="cell cell-right">Quantity Update: <code>999</code></div>
+            <div class="cell cell-right">ASIN: <code>B0FB21526X</code> . Quantity Update: <code>999</code></div>
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">9. Execution Steps</span></div>
@@ -497,11 +511,25 @@
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">11. Actual Result</span></div>
-            <div class="cell cell-right">N/A (Pending Execution)</div>
+            <div class="cell cell-right">System enforced seller limit of 9 per customer. Quantity auto-corrected from 999 to 9. Banner and tooltip warning
+            displayed.</div>
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">12. Status</span></div>
-            <div class="cell cell-right"><span class="status-badge status-pending">Pending</span></div>
+            <div class="cell cell-right"><span class="status-badge partial">Pass</span></div>
+          </div>
+          <div class="tc-row-item">
+            <div class="cell cell-left"><span class="label-text">13. Evidence</span></div>
+            <div class="cell cell-right">
+              <div class="evidence-area">
+                <div class="evidence-box">
+                  <h4>UI Validation</h4>
+                  <img src="screenshots/amazon-cart-maxqty.png" alt="System enforces inventory stock limit and shows warning"
+                    class="tc-screenshot zoomable" onclick="openModal(this.src)">
+                  <p class="evidence-caption"><i class="fas fa-search-plus"></i> Click to enlarge</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="tc-separator"></div>
