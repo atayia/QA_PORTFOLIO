@@ -179,6 +179,19 @@
             <div class="cell cell-left"><span class="label-text">12. Status</span></div>
             <div class="cell cell-right"><span class="status-badge partial">Pass</span></div>
           </div>
+          <div class="tc-row-item">
+            <div class="cell cell-left"><span class="label-text">13. Evidence</span></div>
+            <div class="cell cell-right">
+              <div class="evidence-area">
+                <div class="evidence-box">
+                  <h4>UI & Network Validation</h4>
+                  <img src="screenshots/amazon-login-failed-network.png" alt="Login Failed Screenshot" class="tc-screenshot zoomable"
+                    onclick="openModal(this.src)">
+                  <p class="evidence-caption"><i class="fas fa-search-plus"></i> Click to enlarge</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="tc-separator"></div>
       </article>
@@ -187,7 +200,7 @@
       <article class="report-section" id="TC-AMZ-003">
         <div class="project-card-header">
           <h2 class="report-title">TC-AMZ-003: Alphanumeric Search (Positive)</h2>
-          <span class="status-badge status-pending">Pending</span>
+          <span class="status-badge partial">Pass</span>
         </div>
         <div class="tc-table">
           <div class="tc-row-item">
@@ -239,11 +252,12 @@
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">11. Actual Result</span></div>
-            <div class="cell cell-right">N/A (Pending Execution)</div>
+            <div class="cell cell-right">274 results returned. Top position is a sponsored competitor ad. First organic result is Logitech-branded. Filters
+            functional</div>
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">12. Status</span></div>
-            <div class="cell cell-right"><span class="status-badge status-pending">Pending</span></div>
+            <div class="cell cell-right"><span class="status-badge partial">Pass</span></div>
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">13. Evidence</span></div>
@@ -251,15 +265,19 @@
               <div class="evidence-area">
                 <div class="evidence-box">
                   <h4>UI Validation</h4>
-                  <div class="placeholder-box">
-                    <i class="fas fa-camera"></i> Screenshot pending test execution
-                  </div>
+                  <img src="screenshots/amazon-search-results.png"
+                    alt="Search results page showing 274 results for Logitech MX Master 3S"
+                    class="tc-screenshot zoomable"
+                    onclick="openModal(this.src)">
+                  <p class="evidence-caption"><i class="fas fa-search-plus"></i> Click to enlarge</p>
                 </div>
                 <div class="evidence-box">
-                  <h4>Network Log — Search API Response</h4>
-                  <div class="placeholder-box">
-                    <i class="fas fa-code"></i> DevTools capture pending — amazon-search-network.png
-                  </div>
+                  <h4>Network Log — GET 200 (SERP)</h4>
+                  <img src="screenshots/amazon-search-network.png"
+                    alt="DevTools Network tab showing search GET request returning 200 OK"
+                    class="tc-screenshot zoomable"
+                    onclick="openModal(this.src)">
+                  <p class="evidence-caption"><i class="fas fa-search-plus"></i> Click to enlarge</p>
                 </div>
               </div>
             </div>
@@ -272,7 +290,7 @@
       <article class="report-section" id="TC-AMZ-004">
         <div class="project-card-header">
           <h2 class="report-title">TC-AMZ-004: Cart Persistence (State)</h2>
-          <span class="status-badge status-pending">Pending</span>
+          <span class="status-badge partial">Pass</span>
         </div>
         <div class="tc-table">
           <div class="tc-row-item">
@@ -307,7 +325,7 @@
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">8. Test Data</span></div>
-            <div class="cell cell-right">Item ID: <code>B0982XWDRS</code></div>
+            <div class="cell cell-right">Item ID: <code>ASIN: B0FB21526X — Logitech MX Master 3S Bluetooth Mouse</code></div>
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">9. Execution Steps</span></div>
@@ -325,11 +343,11 @@
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">11. Actual Result</span></div>
-            <div class="cell cell-right">N/A (Pending Execution)</div>
+            <div class="cell cell-right">Correct item remains in cart. Cart count persists as (1)</div>
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">12. Status</span></div>
-            <div class="cell cell-right"><span class="status-badge status-pending">Pending</span></div>
+            <div class="cell cell-right"><span class="status-badge partial">Pass</span></div>
           </div>
           <div class="tc-row-item">
             <div class="cell cell-left"><span class="label-text">13. Evidence</span></div>
@@ -337,15 +355,17 @@
               <div class="evidence-area">
                 <div class="evidence-box">
                   <h4>UI Validation</h4>
-                  <div class="placeholder-box">
-                    <i class="fas fa-camera"></i> Screenshot pending test execution
-                  </div>
+                  <img src="screenshots/amazon-cart-persistence.png"
+                    alt="Cart showing item persisted after logout and re-login" class="tc-screenshot zoomable"
+                    onclick="openModal(this.src)">
+                  <p class="evidence-caption"><i class="fas fa-search-plus"></i> Click to enlarge</p>
                 </div>
                 <div class="evidence-box">
-                  <h4>Network Log — Cart State GET</h4>
-                  <div class="placeholder-box">
-                    <i class="fas fa-code"></i> DevTools capture pending — amazon-cart-network.png
-                  </div>
+                  <h4>Network Log — POST 200 (Add to Cart)</h4>
+                  <img src="screenshots/amazon-cart-add-network.png"
+                    alt="DevTools Network tab showing cart add POST request returning 200 OK" class="tc-screenshot zoomable"
+                    onclick="openModal(this.src)">
+                  <p class="evidence-caption"><i class="fas fa-search-plus"></i> Click to enlarge</p>
                 </div>
               </div>
             </div>
@@ -633,19 +653,6 @@
   </div>
 
   <footer id="footer-bottom"></footer>
-
-  <script>
-    function openModal(src) {
-      document.getElementById('evidenceModal').style.display = 'flex';
-      document.getElementById('modalImg').src = src;
-    }
-    function closeModal() {
-      document.getElementById('evidenceModal').style.display = 'none';
-    }
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeModal();
-    });
-  </script>
 
   <script src="../scripts.js"></script>
 
