@@ -454,8 +454,7 @@ body {
 .cell {
   background: var(--glass);
   padding: 1.2rem 1.5rem;
-  display: flex;
-  align-items: flex-start;
+  display: block;
   border-bottom: 1.5px solid rgba(0, 0, 0, 0.4);
 }
 
@@ -491,6 +490,19 @@ body {
 .method-get    { background: rgba(56, 189, 248, 0.15);  color: #38bdf8; border: 1px solid #38bdf8; }
 .method-delete { background: rgba(244, 114, 182, 0.15); color: #f472b6; border: 1px solid #f472b6; }
 .method-patch  { background: rgba(251, 191, 36, 0.15);  color: #fbbf24; border: 1px solid #fbbf24; }
+
+/* Inline code — prevents float-out inside .cell prose */
+.cell code {
+  display: inline;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85em;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.08);
+  padding: 1px 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
 
 /* Request / response code blocks */
 .code-block {
